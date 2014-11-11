@@ -1,0 +1,9 @@
+{
+  "firebase": "cybers",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
