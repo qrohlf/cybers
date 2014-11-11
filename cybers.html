@@ -14,24 +14,25 @@
         background: #eee;
       }
     </style>
-    <script src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
+    <script src="https://cdn.firebase.com/js/client/2.0.2/firebase.js"></script>
   </head>
   <body>
     <span id="cyber"></span>
     <script type="text/javascript">
-    var cybers = new Firebase('https://cybers.firebaseio.com');
+    var cybers = new Firebase('https://cybers.firebaseio.com/');
+    var yesterday = new Date().getTime() - 8640000; // 8640000 ms == 1 day
 
     window.onclick = function() {
-      cybers.push(Date());
-      // console.log('push');
+      var data = {time: new Date().getTime()};
+      cybers.push(data);
+      console.log(data);
     };
 
     function renderCybers(n) {
       document.getElementById('cyber').innerHTML = n+' cybers today';
     }
 
-    cybers.on('value', function(snapshot) {
-      // console.log(snapshot.val());
+    cybers.orderByChild('time').startAt(yesterday).on('value', function(snapshot) {
       renderCybers(snapshot.numChildren());
     });
 
