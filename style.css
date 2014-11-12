@@ -8,9 +8,14 @@ body {
   font-size: 128px;
   text-align: center;
   min-height: 100%;
-  background: #eee;
+  background: #3498db;
+  color: #fff;
   margin: 0;
   padding: 16px;
+}
+
+body.logged-in {
+  background: #9b59b6;
 }
 
 @media screen and (max-width: 800px) {
@@ -37,10 +42,11 @@ body {
   bottom: 0;
   right: 0;
   padding: 8px;
-  color: #eee;
   display: inline-block;
+  opacity: 0;
+  color: #fff;
 }
 
 .login:hover {
-  color: #05a4ee;
+  opacity: 1;
 }
