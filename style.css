@@ -1,5 +1,7 @@
 html {
   height: 100%;
+  margin: 0;
+  padding: 16px;
 }
 body {
   font-family: Menlo, Consolas, monaco, monospace;
@@ -7,6 +9,14 @@ body {
   text-align: center;
   min-height: 100%;
   background: #eee;
+  margin: 0;
+  padding: 16px;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 64px;
+  }
 }
 
 #cybers {
