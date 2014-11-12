@@ -49,6 +49,7 @@ body.logged-out:active .aliens {
   background: #2980b9;
   z-index: 1;
   display: none;
+  cursor: pointer;
 }
 
 .aliens img {
