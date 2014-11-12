@@ -24,9 +24,40 @@ body.logged-in {
   }
 }
 
+body.logged-out:active .aliens {
+  display: block;
+}
+
 #cybers {
   position: absolute;
   top: 45%;
+  left: 0;
+  right: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  cursor: pointer;
+}
+
+.aliens {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2980b9;
+  z-index: 1;
+  display: none;
+}
+
+.aliens img {
+  position: absolute;
+  top: 45%;
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   left: 0;
   right: 0;
   -webkit-transform: translate(0, -50%);
@@ -45,6 +76,7 @@ body.logged-in {
   display: inline-block;
   opacity: 0;
   color: #fff;
+  z-index: 99999;
 }
 
 .login:hover {

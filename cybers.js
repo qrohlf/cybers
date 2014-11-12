@@ -28,12 +28,12 @@ function do_the_thing() {
 
   cybers.onAuth(authCallback);
 
-  function login() {
+  window.login = function() {
     console.log("attempting login");
     cybers.authWithOAuthRedirect("github", function(authData) {
 
     });
-  }
+  };
 
   window.logout = function() {
     console.log("bye");
