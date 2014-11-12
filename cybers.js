@@ -11,7 +11,7 @@ function do_the_thing() {
   }
 
   function renderCybers(n) {
-    document.getElementById('cybers').innerHTML = n+' cybers today';
+    document.getElementById('cybers').innerHTML = n + (n==1?' cyber':' cybers') + ' today';
   }
 
   function authCallback(authData) {
