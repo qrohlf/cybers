@@ -3,6 +3,8 @@ html {
 }
 *, *:before, *:after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -12,9 +14,9 @@ html {
 }
 body {
   font-family: Menlo, Consolas, monaco, monospace;
-  font-size: 128px;
+  font-size: 64px;
   text-align: center;
-  min-height: 100%;
+  height: 100%;
   background: #3498db;
   color: #fff;
   margin: 0;
@@ -24,13 +26,21 @@ body {
   -ms-user-select: none;
 }
 
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 body.logged-in {
   background: #9b59b6;
 }
 
 @media screen and (max-width: 800px) {
   body {
-    font-size: 64px;
+    font-size: 32px;
   }
 }
 
@@ -38,7 +48,7 @@ body.logged-out:active .aliens {
   display: block;
 }
 
-#cybers {
+.content {
   position: absolute;
   top: 45%;
   left: 0;
@@ -77,6 +87,10 @@ body.logged-out:active .aliens {
   transform: translate(0, -50%);
 }
 
+p {
+  margin: 1em 0;
+}
+
 .login {
   text-decoration: none;
   font-size: 16px;
@@ -92,4 +106,12 @@ body.logged-out:active .aliens {
 
 .login:hover {
   opacity: 1;
+}
+
+#cybers {
+  font-size: 2em;
+}
+
+#uncyber {
+  opacity: 0.7;
 }

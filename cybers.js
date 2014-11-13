@@ -10,6 +10,14 @@ function do_the_thing() {
     console.log(data);
   }
 
+  function unCyber() {
+    cybers.orderByChild('time').limitToLast(1).once('value', function(snapshot) {
+      snapshot.forEach(function(childSnapshot) {
+        childSnapshot.ref().remove();
+      });
+    });
+  }
+
   function renderCybers(n) {
     document.getElementById('cybers').innerHTML = n + (n==1?' cyber':' cybers') + ' today';
   }
@@ -18,8 +26,12 @@ function do_the_thing() {
     if (authData === null) return;
     console.log("user logged in!");
     console.log(authData);
-    window.onclick = addCyber;
-    window.ontouchleave = addCyber;
+    document.body.addEventListener('click', addCyber);
+    document.getElementById('uncyber').onclick = function(e) {
+      unCyber();
+      e.stopPropagation();
+      return false;
+    };
     document.body.className = "logged-in";
   }
 
