@@ -5,7 +5,7 @@ function do_the_thing() {
   function addCyber() {
     var data = {time: new Date().getTime()};
     cybers.push(data, function(error) {
-      if (error) alert("nice try bud");
+      // if (error) alert("nice try bud");
     });
     console.log(data);
   }
