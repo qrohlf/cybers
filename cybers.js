@@ -19,6 +19,7 @@ function do_the_thing() {
     console.log("user logged in!");
     console.log(authData);
     window.onclick = addCyber;
+    window.ontouchleave = addCyber;
     document.body.className = "logged-in";
   }
 
