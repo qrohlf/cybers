@@ -114,4 +114,9 @@ p {
 
 #uncyber {
   opacity: 0.7;
+  display: none;
+}
+
+.logged-in #uncyber {
+  display: block;
 }
